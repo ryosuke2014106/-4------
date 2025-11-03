@@ -1,0 +1,301 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color:#1A48A6 ;
+    padding: 12px 0px;
+    position: fixed;
+    width: 100%;
+}
+
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+    padding:0px 20px;
+    position: relative;
+    align-items: center;
+    
+}
+
+.img{
+    background-image: url(../img/kv.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 400px;
+}
+
+li{
+    padding: 0px 16px;
+}
+
+a{
+    text-decoration: none;
+    color:white;
+}
+
+a:hover{
+    color: bisque;
+}
+
+.company{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 64px;
+    padding: 12px 0px;
+}
+
+.company_description{
+    font-style: italic;
+    padding: 12px 0px;
+    margin-bottom: 64px;
+}
+
+.underline{
+    background-image: linear-gradient(to top, orange 0%, orange 40%, transparent 40%);
+}
+
+.service_title{
+    font-weight: bold;
+    font-size: 24px;
+}
+.service_content{
+    margin-top: 48px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.service_flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 6px;
+}
+
+.service{
+    border: 3px solid grey;
+    padding: 24px;
+    text-align: center;
+    width: 200px;
+    margin-top: 24px;
+    transition:all 0.3s ease-out;
+}
+
+.description{
+    border:3px solid grey;
+    margin-top: 12px;
+    padding: 8px;
+    margin: 5px;
+}
+
+#web:hover {
+    background-color: #b3ffff ;
+}
+
+#seo:hover {
+    background-color:#ffdea0  ;
+}
+
+#app:hover {
+    background-color: #a7ff99 ;
+}
+
+#web.selected {
+    background-color: #b3ffff;
+}
+
+#seo.selected {
+    background-color: #ffdea0;
+}
+
+#app.selected {
+    background-color: #a7ff99;
+}
+
+.inquiry{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    width: 300px;
+    margin: 64px auto;
+}
+
+.inquiry_content{
+    text-align: left;
+}
+
+.inquiry_content div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px    
+}
+
+.label_title{
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.inquiry_name{
+    margin-top: 24px;
+}
+
+.required{
+    font-size: 10px;
+    color: red;
+}
+
+.tel_span{
+    color:rgb(117, 115, 115);
+    font-size: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="submit"],
+select {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.hamburger_menu{
+    width: 24px;
+    position: relative;
+    border: none;
+    background: transparent;
+    appearance: none;
+    padding: 0;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger_menu_bar{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform-origin: center;
+
+}
+
+.hamburger_menu.is-open .hamburger_menu_bar:first-child {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.hamburger_menu.is-open .hamburger_menu_bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger_menu.is-open .hamburger_menu_bar:last-child {
+    transform:  rotate(-45deg) translateY(-6px);
+}
+
+.hamburger_menu_bar + .hamburger_menu_bar {
+  margin-top: 6px;
+}
+
+
+.nav-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #1A48A6;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-menu ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-menu li {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    border-bottom: 1px solid white;
+}
+
+.nav-menu li:first-child {
+    border-top: 1px solid white;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+#company,
+#service,
+#inquiry {
+   scroll-margin-top: 48px; 
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .none{
+        display: none;
+    }
+
+    .service_flex{
+        flex-flow:column;
+        gap: 16px;
+        max-width: 300px;
+        margin: 0 auto ;
+    }
+
+    header a{
+        margin: auto 0;
+    }
+
+    header{
+        padding: 12px 0px;
+    }
+
+    .hamburger_menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 360px){
+    h1{
+        font-size: 24px;
+    }
+}
+
+.thanks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
