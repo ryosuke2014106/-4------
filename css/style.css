@@ -16,7 +16,6 @@ header{
     max-width: 800px;
     margin: 0 auto;
     padding:0px 20px;
-    position: relative;
     align-items: center;
     
 }
@@ -195,7 +194,7 @@ select {
 }
 
 .hamburger_menu.is-open .hamburger_menu_bar:first-child {
-    transform: rotate(45deg) translateY(6px);
+    transform: rotate(45deg) translateY(11px);
 }
 
 .hamburger_menu.is-open .hamburger_menu_bar:nth-child(2) {
@@ -203,13 +202,12 @@ select {
 }
 
 .hamburger_menu.is-open .hamburger_menu_bar:last-child {
-    transform:  rotate(-45deg) translateY(-6px);
+    transform: rotate(-45deg) translateY(-11px);
 }
 
 .hamburger_menu_bar + .hamburger_menu_bar {
-  margin-top: 6px;
+    margin-top: 6px;
 }
-
 
 .nav-menu {
     display: none;
